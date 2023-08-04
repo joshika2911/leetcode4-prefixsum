@@ -1,0 +1,14 @@
+8. Find the Score of All Prefixes of an Array
+class Solution {
+    public long[] findPrefixScore(int[] nums) {
+        long[] arr= new long[nums.length];
+        long m=nums[0];
+        long s=0;
+        for(int i=0;i<nums.length;i++){
+            m=m<=nums[i]?nums[i]:m;
+            s=s+nums[i]+m;
+            arr[i]=s;
+        }
+        return arr;
+    }
+}

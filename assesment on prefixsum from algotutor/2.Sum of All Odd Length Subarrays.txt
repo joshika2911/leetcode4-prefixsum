@@ -1,0 +1,10 @@
+2.Sum of All Odd Length Subarrays
+class Solution {
+    public int sumOddLengthSubarrays(int[] arr) {
+         int r = 0, na = arr.length;
+        for (int i = 0; i < na; ++i) {
+            r += ((i + 1) * (na - i) + 1) / 2 * arr[i];
+        }
+        return r;
+    }
+}
